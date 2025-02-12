@@ -2,6 +2,11 @@
 
 baseURL: https://site.ekola.osuny.site
 
+## OSUNY
+osuny:
+  website:
+    id: 8530e856-9bc5-4167-88b6-f9508520feb8
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
