@@ -2,6 +2,11 @@
 
 baseURL: https://site.ekola.osuny.site
 
+## OSUNY
+osuny:
+  website:
+    id: 8530e856-9bc5-4167-88b6-f9508520feb8
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
@@ -9,15 +14,13 @@ defaultContentLanguageInSubdir: false
 ## CACHE
 deployment:
   matchers:
-    - pattern: "^.+\\.(woff2|woff|svg|ttf|eot|js|css)$"
+    - pattern: "^.+\\.(woff2|woff|svg|ttf|otf|eot|js|css)$"
       cacheControl: "max-age=31536000, no-transform, public"
       gzip: true
     - pattern: "^.+\\.(png|jpg|jpeg|gif|webp)$"
       cacheControl: "max-age=31536000, no-transform, public"
       gzip: false
-
-## DEUXFLEURS
-deployment:
+  ## DEUXFLEURS
   targets:
     - name: "production"
-      URL: "s3://site.ekola.osuny.site?endpoint=garage.deuxfleurs.fr&s3ForcePathStyle=true&region=garage"
+      URL: "s3://site.ekola.osuny.site?endpoint=garage.deuxfleurs.fr&s3ForcePathStyle=true&region=garage&awssdk=v1"
